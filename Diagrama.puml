@@ -1,0 +1,19 @@
+@startuml
+class Livro {
+  - id: int
+  - titulo: String
+  - autor: String
+  - ano: int
+  + get/set
+}
+
+class Biblioteca {
+  - livros: List<Livro>
+  + adicionarLivro()
+  + listarLivros()
+  + atualizarLivro()
+  + deletarLivro()
+}
+
+Biblioteca "1" *-- "*" Livro
+@enduml
